@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 export const ItemCount = ({initial, stock, onAdd}) => {
-    const [count, setCount] = useState(initial);
+    const [count, setCount] = useState(parseInt(initial));
 
     const decrece = () => {
         setCount(count - 1);
@@ -9,7 +9,11 @@ export const ItemCount = ({initial, stock, onAdd}) => {
 
     const crece = () => {
         setCount(count + 1);
-    }
+    };
+
+    useEffect(() =>{
+        setCount(parseInt(initial));
+    }, [initial]);
 
     
 

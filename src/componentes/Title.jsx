@@ -1,9 +1,8 @@
 import React from 'react';
 
-export const Title = (props) => {
-    console.log(props);
+export const Title = (greeting) => {
     return (
-        <h1>{props.greeting}</h1>
+        <h1>{greeting}</h1>
     );
 }
 

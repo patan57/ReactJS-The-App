@@ -6,13 +6,13 @@ export const NavBar = () => {
     return(
         <div>
             <div>
-                <NavLink className="nav">NavBar</NavLink>
+                <NavLink className="nav">Marvel Plus</NavLink>
             </div>
             <div>
-                <ul>
-                    <li><NavLink className="nav__link" to='/'>Conocenos</NavLink></li>
-                    <li><NavLink className="nav__link" to='/categoria'>Productos</NavLink></li>
-                    <li><NavLink className="nav__link" to='/categoria'>Contacto</NavLink></li>
+                <ul className='nav'>
+                    <li><NavLink className="nav__link" to='/'>Inicio</NavLink></li>
+                    <li><NavLink className="nav__link" to='/categoria/films'>Películas</NavLink></li>
+                    <li><NavLink className="nav__link" to='/categoria/series'>Series</NavLink></li>
                     <li><NavLink className="nav__link" to='/cart'>Carrito <CartWidget /></NavLink></li>
                 </ul>
             </div>

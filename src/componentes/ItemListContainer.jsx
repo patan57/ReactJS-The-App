@@ -16,11 +16,12 @@ export const ItemListContainer = ({texto}) => {
         if (categoriaId) {
             const queryFilter = query (queryCollection, 
                 where('category', '==', categoriaId),);
+                
             getDocs (queryFilter)
-            .then ( (res) => setData (res.docs.map(item => ({id: item.id, ...item.data}))))
+            .then ( (res) => setData (res.docs.map(item => ({id: item.id, ...item.data()}))))
         } else{
             getDocs (queryCollection)
-                .then ( res => setData (res.docs.map(item => ({id: item.id, ...item.data}))))
+                .then ( res => setData (res.docs.map(item => ({id: item.id, ...item.data()}))))
         }
     }, [categoriaId]);
 

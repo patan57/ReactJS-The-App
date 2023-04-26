@@ -10,10 +10,10 @@ export const NavBar = () => {
             </div>
             <div>
                 <ul className='nav'>
-                    <li><NavLink className="nav__link" to='/'>Inicio</NavLink></li>
-                    <li><NavLink className="nav__link" to='/categoria/films'>Películas</NavLink></li>
-                    <li><NavLink className="nav__link" to='/categoria/series'>Series</NavLink></li>
-                    <li><NavLink className="nav__link" to='/cart'>Carrito <CartWidget /></NavLink></li>
+                    <li><NavLink className="nav__link" to="/">Inicio</NavLink></li>
+                    <li><NavLink className="nav__link" to="/categoria/film">Películas</NavLink></li>
+                    <li><NavLink className="nav__link" to="/categoria/serie">Series</NavLink></li>
+                    <li><NavLink className="nav__link" to="/cart">Carrito <CartWidget /></NavLink></li>
                 </ul>
             </div>
         </div>

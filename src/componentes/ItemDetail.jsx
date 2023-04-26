@@ -7,11 +7,11 @@ import { useCartContext } from '../context/CartContext';
 
 export const ItemDetail = ({data}) => {
     const [goToCart, setGoToCart] = useState(false);
-    const {addProduct} = useCartContext();
+    const {addItem} = useCartContext();
 
     const onAdd = (quantity) => {
         setGoToCart(true);
-        addProduct(data, quantity);
+        addItem(data, quantity);
     }
 
     return (
@@ -22,8 +22,8 @@ export const ItemDetail = ({data}) => {
                     <h1>{data.title}</h1>
                     {
                         goToCart
-                            ? <Link to='/cart'> Terminar compra </Link>
-                            : <ItemCount initial={1} stock={5} onAdd={onAdd} />
+                            ? (<Link to='/cart'> Terminar compra </Link>)
+                            : (<ItemCount initial={1} stock={5} onAdd={onAdd} />)
                     }
                 </div>
             </div>

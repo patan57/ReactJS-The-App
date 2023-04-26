@@ -15,11 +15,12 @@ export const Cart = () => {
             telefono:'1155443322',
             domicilio:'Michigan avenue 1234'
         },
-        items: cart.map ((product) => ({
-            id: product.id,
-            title: product.title,
-            price: product.price,
-            quantity: product.quantity
+
+        products: cart.map ((item) => ({
+            id: item.id,
+            title: item.title,
+            price: item.price,
+            quantity: item.quantity
         })),
         total: totalPrice(),
     }
@@ -42,7 +43,7 @@ export const Cart = () => {
     return(
         <>
             {
-                cart.map((product) => (<ItemCart key={product.id} product={product} />))
+                cart.map((item) => (<ItemCart key={item.id} item={item} />))
             }
             <p>
                 total: {totalPrice()}
